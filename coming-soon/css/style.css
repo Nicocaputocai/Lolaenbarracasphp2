@@ -1,0 +1,528 @@
+/*  ################################################################
+
+  File Name: style.css
+  Template Name: Metric
+  Created By: justthemevalley 
+
+ 
+ 
+ [Table of contents]
+ 
+ 
+################################################################# */ 
+
+/******************************************
+ Common styles
+******************************************/
+
+
+body {
+	background: #fff;
+	color: #000;
+	font-family: "Karla", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: left
+}
+* {
+	margin: 0;
+	padding: 0
+}
+img {
+	border: 0;
+	max-width: 100%
+}
+a {
+	color: #333;
+	text-decoration: none;
+	transition: 0.5s all ease
+}
+a:hover {
+	text-decoration: none;
+	color: #ff3366
+}
+a:focus {
+	outline: 0;
+	text-decoration: none;
+	color: #666
+}
+:focus {
+	outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 5px;
+	line-height: 1.35;
+	color: #262a2d
+}
+h1 {
+	font-weight: normal
+}
+h2 {
+	font-weight: normal;
+	margin-bottom: 15px
+}
+h3 {
+	font-weight: bold
+}
+h4 {
+	font-weight: bold
+}
+h5 {
+	font-weight: bold
+}
+h6 {
+	font-weight: bold
+}
+form {
+	display: inline
+}
+fieldset {
+	border: 0
+}
+legend {
+	display: none
+}
+table {
+	border: 0;
+	border-spacing: 0;
+	empty-cells: show;
+	font-size: 100%
+}
+caption, th, td {
+	vertical-align: top;
+	text-align: left;
+	font-weight: normal
+}
+thead tr th {
+	font-weight: bold;
+	text-transform: none;
+	font-size: 12px
+}
+p {
+	margin: 0 0 10px
+}
+strong {
+	font-weight: bold
+}
+address {
+	font-style: normal;
+	line-height: 1.35
+}
+cite {
+	font-style: normal
+}
+q, blockquote {
+	quotes: none
+}
+q:before, q:after {
+	content: ''
+}
+small, big {
+	font-size: 1em
+}
+ul, ol {
+	padding: 0;
+	margin: 0 0 10px 25px
+}
+ul ul, ul ol, ol ol, ol ul {
+	margin-bottom: 0
+}
+ul.unstyled, ol.unstyled {
+	margin-left: 0;
+	list-style: none
+}
+ul.inline, ol.inline {
+	margin-left: 0;
+	list-style: none
+}
+ul.inline>li, ol.inline>li {
+	display: inline-block;
+*display:inline;
+	padding-right: 5px;
+	padding-left: 5px;
+*zoom:1
+}
+ul ul, ol ul {
+	list-style-type: circle
+}
+.hidden {
+	display: block !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	overflow: hidden !important
+}
+.nobr {
+	white-space: nowrap !important
+}
+.wrap {
+	white-space: normal !important
+}
+.a-left {
+	text-align: left !important
+}
+.a-center {
+	text-align: center !important
+}
+.a-right {
+	text-align: right !important
+}
+.v-top {
+	vertical-align: top
+}
+.v-middle {
+	vertical-align: middle
+}
+.f-left, .left {
+	float: left !important
+}
+.f-right, .right {
+	float: right !important
+}
+.f-none {
+	float: none !important
+}
+.f-fix {
+	float: left;
+	width: 100%
+}
+.no-display {
+	display: none
+}
+.no-margin {
+	margin: 0 !important
+}
+.no-padding {
+	padding: 0 !important
+}
+.no-bg {
+	background: none !important
+}
+small {
+	font-size: 85%;
+	font-weight: normal;
+	text-transform: lowercase;
+	color: #999999
+}
+input:focus {
+	outline: none
+}
+/* 3.2. logo */
+.logo {
+	margin: 40px 0px
+}
+/* 3.3. Intro */
+.intro {
+	border: 0px solid #fff;
+	width: 70%;
+	position: relative;
+	padding: 80px 50px 40px;
+	margin: auto;
+}
+.intro h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 40px;
+	line-height: 1.2;
+	margin: 0em 0 0.5em;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+}
+.intro h1 span {
+	font-size: 40px;
+}
+.intro h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.8em;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+	font-weight: 300;
+	color: #fff
+}
+.intro p {
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	color: #fff
+}
+/* 3.4. Countdown  */
+.dash-glob {
+	margin-right: 15px;
+	border: 4px double #ccc;
+	width: 23.5%;
+	padding: 0px;
+}
+.dash.days_dash {
+	background: #ff3366;
+}
+.dash.hours_dash {
+	background: #3366cc;
+}
+.dash.minutes_dash {
+	background: #ff6633;
+}
+.dash.seconds_dash {
+	background: #669900;
+}
+.dash-glob:last-child {
+	margin-right: 0px;
+}
+.dash_title, .digit {
+	color: rgba(250, 250, 250, 0.9);
+}
+#countdown {
+	border: 0 solid #fff;
+	float: none;
+	margin: 4px 0 25px;
+	padding: 20px 0;
+	position: relative;
+	text-align: center;
+	width: 85%;
+	margin: auto auto 50px;
+}
+#countdown_dashboard {
+	display: block;
+	margin: 0px auto;
+	overflow: hidden
+}
+.dash {
+	position: relative;
+	opacity: 1;
+	padding: 0 0 10px 0;
+	margin: 0;
+	width: 100%;
+}
+#countdown-metric .dash-glob:first-child {
+	margin-left: 0;
+	border-left: none
+}
+.dash_title {
+	font-size: 13px;
+	line-height: 22px;
+	width: 100%;
+	display: block;
+	font-weight: 100;
+	clear: both;
+	padding-top: 10px;
+}
+.digit {
+	font-size: 3em;
+	line-height: 50px;
+	font-weight: 700;
+	height: 56px;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	vertical-align: middle;
+}
+.footer-coppyright {
+	padding-bottom: 15px;
+	color: #fff;
+	margin-top: 25px;
+}
+.footer-coppyright .container {
+	position: absolute;
+	bottom: 15px;
+}
+.footer-coppyright a {
+	color: #fff;
+}
+.coppyright {
+	padding-top: 5px
+}
+/******************************************
+ Coming Soon
+******************************************/
+.coming-soon-wrapper .logo {
+	text-align: center;
+}
+.coming-soon-wrapper p {
+	color: #fff;
+	font-size: 30px;
+	padding: 40px 0;
+	font-weight: bold;
+	line-height: 42px;
+}
+.coming-soon-wrapper .stat-count {
+	color: #fff;
+	margin: 0 !important;
+	font-size: 80px;
+	padding: 15px !important;
+	font-weight: 400;
+}
+.coming-soon-wrapper .form-control {
+	display: inline;
+	position: relative;
+	background: #fff;
+	border-radius: 0;
+	border: 0;
+	padding: 0 20px;
+	margin-right: 0px;
+	height: 50px;
+	width: 380px;
+	border-radius: 50px 0 0 50px;
+	float: left;
+}
+button.button.sign-in {
+	border-radius: 0 50px 50px 0;
+	font-size: 16px;
+	float: left;
+	background: #ff3366;
+	border: 2px solid #ff3366;
+	color: #fff;
+	padding: 13px 25px 13px 20px;
+}
+ @media only screen and (min-width: 300px) and (max-width: 767px) {
+.coming-soon-wrapper .form-control {
+	width: 100%;
+	border-radius: 50px;
+	margin-bottom: 12px;
+}
+button.button.sign-in {
+	border-radius: 50px;
+}
+}
+.social ul.inline-mode li a:before {
+	content: ""
+}
+.social ul.inline-mode li a {
+	border: 1px solid #666;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 13px;
+	height: 30px;
+	line-height: 28px;
+	width: 30px;
+	display: inline-block;
+	text-align: center
+}
+.social .fb a:hover {
+	background: #3C5B9B
+}
+.social .tw a:hover {
+	background: #359BED
+}
+.social .googleplus a:hover {
+	background: #E33729
+}
+.social .rss a:hover {
+	background: #FD9F13
+}
+.social .instagram a:hover {
+	background: #3f729b
+}
+.social .linkedin a:hover {
+	background: #027ba5
+}
+.social h4 {
+	margin: 25px 0 5px
+}
+.social ul {
+	margin: 0;
+	list-style: none;
+	text-align: right;
+	float: right
+}
+@media (max-width:640px) {
+.social ul {
+	float: none;
+	text-align: center
+}
+}
+.social ul li {
+	margin-left: 7px;
+	display: inline-block
+}
+.social a {
+	transition: background 400ms ease-in-out;
+	-webkit-transition: background 400ms ease-in-out;
+	-moz-transition: background 400ms ease-in-out;
+	-o-transition: background 400ms ease-in-out
+}
+@media (max-width:767px) {
+.social {
+	margin-bottom: 10px;
+	text-align: center
+}
+#countdown {
+	border: 0 solid #fff;
+	float: none;
+	margin: 4px 0 25px;
+	padding: 20px 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: auto auto 50px;
+}
+.logo {
+	text-align: center;
+	margin: 12px 0;
+}
+.intro {
+	border: 0px solid #fff;
+	width: 95%;
+	position: relative;
+	padding: 20px 10px 20px;
+	margin: auto;
+}
+.intro h1 span, .intro h1 {
+	font-size: 22px;
+}
+.intro p {
+	font-size: 12px;
+}
+#countdown {
+	width: 100%;
+}
+.dash_title {
+	font-size: 10px;
+}
+.digit {
+	font-size: 16px;
+	height: inherit;
+	line-height: inherit;
+}
+.dash-glob {
+	margin-right: 5px;
+	border: 4px double #ccc;
+	width: 23.5%;
+	padding: 0px;
+}
+.footer-coppyright .container {
+	position: relative;
+}
+}
+ @media only screen and (min-width: 768px) and (max-width: 1280px) {
+#countdown {
+	border: 0 solid #fff;
+	float: none;
+	margin: 4px 0 25px;
+	padding: 20px 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: auto auto 50px;
+}
+.intro {
+	border: 0px solid #fff;
+	width: 100%;
+	position: relative;
+	padding: 30px 30px 20px;
+	margin: auto;
+}
+.dash-glob {
+	width: 22.5%
+}
+}

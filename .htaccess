@@ -1,0 +1,35 @@
+#<IfModule mod_rewrite.c>
+
+#    Options +Indexes
+#    Options +FollowSymlinks
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteBase /
+#RewriteRule ^beta3/autor/bio/all/? beta3/index.php?authorProfileId=all [L]
+#RewriteRule ^beta3/autor/bio/([0-9]+)([.*])? beta3/index.php?authorProfileId=$1 [L]
+#RewriteRule ^beta3/autor/([0-9]+)([.*])? beta3/index.php?authorId=$1 [L]
+RewriteRule ^categoria/([0-9]+)([.*])? new_blog.php?inCategoryId=$1 [QSA]
+#RewriteRule ^productos/cat/([0-9]+)-([.*])? new_products.php?inProdCategoryId=$1 [L]
+#RewriteRule ^productos/subcat/([0-9]+)-([.*])? new_products.php?inProdSubCategoryId=$1 [L]
+#RewriteRule ^productos/([0-9]+)-([.*])? new_products.php?inProdId=$1 [L]
+#RewriteRule ^productos/(all)/? new_products.php?inProdId=$1 [L]
+RewriteRule ^productos\/cat\/([0-9]+)\-(.*) new_products.php?inProdCategoryId=$1 [L,QSA]
+RewriteRule ^productos\/subcat\/([0-9]+)-([.*^?])? new_products.php?inProdSubCategoryId=$1 [L,QSA]
+RewriteRule ^productos\/([0-9]+)-([.*^?])? new_products.php?inProdId=$1 [L,QSA]
+RewriteRule ^productos\/(all)\/? new_products.php?inProdId=$1 [L,QSA]
+#RewriteRule beta3/contacto/? beta3/index.php?contact=1 [L]
+#RewriteRule ^beta3/secciones/cat/([0-9]+)([.*])? beta3/index.php?inSectionCategoryId=$1 [L]
+#RewriteRule ^beta3/secciones/(all)/? index.php?inSectionId=$1 [L]
+#RewriteRule ^beta3/secciones/([0-9]+)([.*])? beta3/index.php?inSectionId=$1 [L]
+#RewriteRule ^beta3/eventos/cat/([0-9]+)([.*])? beta3/index.php?inEventCatId=$1 [L]
+#RewriteRule ^beta3/eventos/(all)/? beta3/index.php?inEventId=$1 [L]
+#RewriteRule ^beta3/eventos/([0-9]+)([.*])? beta3/index.php?inEventId=$1 [L]
+RewriteRule ^tag/([0-9]+)([.*])? new_blog.php?inTagId=$1 [L]
+#RewriteRule ^beta3/articulo/([0-9]+)([.*])? index.php?inId=$1 [L]
+#RewriteRule ^beta3/blog/(all)/? index.php?inId=$1 [QSA]
+RewriteRule ^blog/(all)/? new_blog.php?inId=$1 [L,QSA]
+RewriteRule ^blog/([0-9]+)-([.*])? new_blog.php?inId=$1 [L]
+
